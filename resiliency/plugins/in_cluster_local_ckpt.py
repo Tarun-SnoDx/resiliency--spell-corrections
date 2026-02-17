@@ -563,7 +563,7 @@ class InClusterLocalCheckpointLoadStrategy(TorchDistLoadShardedStrategy):
     pyt_state_dict = mcore_to_pyt_state_dict(sharded_state_dict, True)
 
     # Define planner. If replication coordinator is present, use FlexibleLoadPlanner.
-    # This will prevent errors from occuring if local checkpoint is missing.
+    # This will prevent errors from occurring if local checkpoint is missing.
     if self.replication_coordinator is not None:
       planner = ReplicationLoadPlanner(
           shapes_validation_sharded_tensors=flexible_shape_sharded_tensors,
