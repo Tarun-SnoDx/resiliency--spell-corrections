@@ -148,7 +148,7 @@ class MegatronCommOverlapCallback(pl.Callback):
     if vp_size is None:
       vp_size = 1
 
-    # Optimizations disabled by default, can be overriden by user
+    # Optimizations disabled by default, can be overridden  by user
     comm_overlap_cfg.tp_comm_overlap = False
     comm_overlap_cfg.tp_comm_overlap_cfg = None
     comm_overlap_cfg.tp_comm_bootstrap_backend = None
