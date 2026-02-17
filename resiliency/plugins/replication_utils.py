@@ -470,7 +470,7 @@ class ReplicationStorageReader(FileSystemReader):
               target_tensor.copy_(tensor)
               planner.commit_tensor(req, target_tensor)
       elif self.replication_coordinator is not None:
-        # For every request, this rank will need to receive data before being able to laod it.
+        # For every request, this rank will need to receive data before being able to load it.
         # This is a no-op if rank does not have any data to receive.
         for req in reqs:
           if req.type == LoadItemType.BYTE_IO:
