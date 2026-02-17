@@ -431,7 +431,7 @@ class PersistentAsyncCaller(AsyncCaller):
     """Main function for the persistent checkpoint worker
 
     The persisent worker is created once and terminated at exit or
-    when application calls `close()` explictily
+    when application calls `close()` explicitly
 
     This routine receives `AsyncRequest` and does `preload_fn` first and
     put the integer value in `preload_q` to inform the trainer to proceed.
