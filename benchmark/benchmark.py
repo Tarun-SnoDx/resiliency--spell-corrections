@@ -481,7 +481,7 @@ def main():
   # Add the new handler to the logger
   pl_logger.addHandler(console_handler)
 
-  # loging to /tmp folder by default
+  # logging |  to /tmp folder by default
   log_file_dir = f"/tmp/{args.job_name}/log"
   if args.log_to_remote_storage:
     log_file_dir = Path(args.log_dir) / args.job_name / "log"
