@@ -1,4 +1,4 @@
-# Weekend Experment
+# Weekend Experiment
 
 - Create a bug under this [component](https://b.corp.google.com/issues/new?component=1784216&template=0),
 the bug should include head commit hash of the repo, the cmd started the exp, any cmd used to restart the exp, and the final goodput analysis report.
