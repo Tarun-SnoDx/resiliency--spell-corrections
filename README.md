@@ -17,7 +17,7 @@ The Resiliency library provides resilient training code used to improve training
 The scale of large distributed AI training jobs results in frequent failures and interruptions. This library exists to help minimize the impact of failures and interruptions on training, ultimately improving training goodput for training workloads on Google Cloud.
 
 ### Hierarchy of ML frameworks within this library
-This library intertwines several popular ML frameworks and adds features on top of them. The following diagram provides a visual representation of the ML resiliency stack and the benifits that come with each layer:
+This library intertwines several popular ML frameworks and adds features on top of them. The following diagram provides a visual representation of the ML resiliency stack and the benefits that come with each layer:
 
 ![Diagram of the ML Resiliency Stack](docs/media/ml_resiliency_stack_diagram.png)
 
