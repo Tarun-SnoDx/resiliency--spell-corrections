@@ -69,7 +69,7 @@ class ModelCheckpoint(PTLModelCheckpoint):
       save_optim_on_train_end: Whether to include the optimizer states in the
         final checkpoint at the end of training. Only applicable when
         save_weights_only is ``False``.
-      always_save_context: Whether to dump the artifacts needed to reinintialize
+      always_save_context: Whether to dump the artifacts needed to reinitialize 
         the current model, trainer, and dataloader to allow for reproducibility
         of experiments.
       save_context_on_train_end: Whether to dump the artifacts on_train_end
