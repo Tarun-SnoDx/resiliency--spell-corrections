@@ -629,7 +629,7 @@ def get_replication_coordinator(
   3) (1) and (2) is collected for all ranks.
   4) Determine mapping of ranks <-> local checkpoint rank
   5) Determine all other ranks have replicated state of this rank.
-  6) With this information, we iterate throguh all ranks again. For each rank,
+  6) With this information, we iterate through all ranks again. For each rank,
   calculate:
       a) if rank already has access to its own checkpoint: this rank does not
       need to receive.
