@@ -639,7 +639,7 @@ def get_replication_coordinator(
           i) if this rank's checkpoint exists somewhere (using (4)), determine
           that rank with checkpoint as source
           ii) if this rank's checkpoint does not exist somewhere (using (4)),
-          determine smallest rank with repliated state as source
+          determine smallest rank with replicated state as source
               smallest peer rank with replicated state will be source of
               broadcast to all ranks that need replicated state
               NOTE: if no replicated state has source, then we cannot rely on
