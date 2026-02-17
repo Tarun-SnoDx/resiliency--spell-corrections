@@ -136,7 +136,7 @@ def block_and_proces_restore_dir(directory, timeout_s=300):
   _wait_config_file_disappear(replicator_config_path, timeout_s)
   handle_replicator_fail_situation(directory)
 
-  # TODO: will use this feature when enabling data laoder ckpt.
+  # TODO: will use this feature when enabling data loader ckpt.
   process_replicator_prerestore(directory)
 
   for _ in range(timeout_s):
