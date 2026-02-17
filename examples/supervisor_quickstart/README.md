@@ -144,7 +144,7 @@ RUN pip install google-cloud-resiliency-supervisor
 Note: This example assumes a Python 3.10 environment. The path to local_elastic_agent.py might differ slightly based on your Python version or base image. The ARG command dynamically finds the correct path.
 
 ## Step 3: Run Your PyTorch Workload
-With the patched Docker image, you can now run your training job. To activate the supervisor client, you must set the `GCP_HOST_DAEMON_PORT` environment variable when launching your workload. If `GCP_HOST_DAEMON_PORT`, the supervisor client will not be initated by default.
+With the patched Docker image, you can now run your training job. To activate the supervisor client, you must set the `GCP_HOST_DAEMON_PORT` environment variable when launching your workload. If `GCP_HOST_DAEMON_PORT`, the supervisor client will not be initiated  by default.
 
 The client code uses this port to connect to the `supervisor` daemon running on the same node.
 
