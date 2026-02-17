@@ -374,7 +374,7 @@ class LocalElasticAgent(SimpleElasticAgent):
                 else:
                     self._stop_workers(self._worker_group)
                     self._worker_group.state = WorkerState.FAILED
-                    # to preserve torchrun's behaviour, should not return WorkerState.UNHEALTHY.
+                    # to preserve torchrun's behavior, should not return WorkerState.UNHEALTHY.
                     # we use WorkerState.UNHEALTHY to denote a worker group that is still
                     # running but has some failed workers. torchrun does not use WorkerState.UNHEALTHY
                     run_result = self._monitor_workers(self._worker_group)
