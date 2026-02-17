@@ -595,7 +595,7 @@ class LocalElasticAgent(SimpleElasticAgent):
     return self._pcontext.pids()
 
   def _patch_pcontext_close(self, pcontext: PContext) -> None:
-    # replace PContext._close with our version that has cutomized timeout
+    # replace PContext._close with our version that has customized timeout
     # this ensures that the workers have enough time between SIGTERM and SIGKILL
     orig_close = pcontext._close
 
