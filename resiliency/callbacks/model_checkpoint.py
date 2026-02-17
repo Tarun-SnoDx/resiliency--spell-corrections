@@ -46,7 +46,7 @@ from resiliency.goodput_measure import constant as goodput_event
 class ModelCheckpoint(PTLModelCheckpoint):
   """Light wrapper around Lightning's ModelCheckpoint to force a saved checkpoint on train_end.
 
-  Adds support for asyncronous checkpointing and provides some additional logic
+  Adds support for asynchronous checkpointing and provides some additional logic
   to clean up invalid checkpoints
 
   Args:
