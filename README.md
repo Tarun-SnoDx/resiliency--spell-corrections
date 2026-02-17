@@ -11,7 +11,7 @@
 - [Help](#help)
 
 ## Overview
-The Resiliency library provides resilient training code used to improve training goodput (aka training efficiency) of distributed workloads. For those unfamiliar with the term "goodput", please read [Google Cloud Goodput Blogpost](https://cloud.google.com/blog/products/ai-machine-learning/goodput-metric-as-measure-of-ml-productivity). This library provides resilency features built on-top of [NVIDIA NeMo 2.0](https://github.com/NVIDIA/NeMo) training recipes. Reproducible benchmarks demonstrating high training goodput using this library are defined in [AI-Hypercomputer/gpu-recipes](https://github.com/AI-Hypercomputer/gpu-recipes).
+The Resiliency library provides resilient training code used to improve training goodput (aka training efficiency) of distributed workloads. For those unfamiliar with the term "goodput", please read [Google Cloud Goodput Blogpost](https://cloud.google.com/blog/products/ai-machine-learning/goodput-metric-as-measure-of-ml-productivity). This library provides resiliency features built on-top of [NVIDIA NeMo 2.0](https://github.com/NVIDIA/NeMo) training recipes. Reproducible benchmarks demonstrating high training goodput using this library are defined in [AI-Hypercomputer/gpu-recipes](https://github.com/AI-Hypercomputer/gpu-recipes).
 
 ### Motivation
 The scale of large distributed AI training jobs results in frequent failures and interruptions. This library exists to help minimize the impact of failures and interruptions on training, ultimately improving training goodput for training workloads on Google Cloud.
@@ -45,7 +45,7 @@ Holistic cluster control is supported via the Supervisor. The supervisor compris
 
 This library includes the client facing portion of the Supervisor in [`supervisor`](supervisor). One instance of the sensor, controller, and actuator should be deployed on CPU hosts per cluster. Each training host (GPUs) adjacent to the training workload should also run [`host_daemon.py`](supervisor/host_daemon.py) as a daemon deployment. The host daemon deployment on each host is responsible for monitoring the training processes on the same host and will relay all signal to the sensor deployment.
 
-The Supervisor builds upon the resiliency support provided by [NVIDIA's NvRx library](https://github.com/NVIDIA/nvidia-resiliency-ext). In particular, it utilizes the heartbeating mechansisms defined in NvRx as a signal to whether each node is training as expected. When interruptions occur, the training job relies on the in-job restart support provided by NvRx.
+The Supervisor builds upon the resiliency support provided by [NVIDIA's NvRx library](https://github.com/NVIDIA/nvidia-resiliency-ext). In particular, it utilizes the heartbeating mechanisms defined in NvRx as a signal to whether each node is training as expected. When interruptions occur, the training job relies on the in-job restart support provided by NvRx.
 
 Once the Supervisor is deployed, please include launcher flag `--use-supervisor` to attach the training job to the Supervisor.
 ## Tools
